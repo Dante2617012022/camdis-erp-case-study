@@ -1,0 +1,40 @@
+name: Public code samples
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_DB: erp_sample
+          POSTGRES_USER: sample
+          POSTGRES_PASSWORD: disposable-sample-only
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U sample -d erp_sample"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm test
+        working-directory: sample
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+        working-directory: idempotency
+      - run: npm test
+        working-directory: idempotency
+      - run: npm run test:integration
+        working-directory: idempotency
+        env:
+          SAMPLE_DATABASE_URL: postgres://sample:disposable-sample-only@127.0.0.1:5432/erp_sample

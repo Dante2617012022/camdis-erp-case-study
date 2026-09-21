@@ -13,6 +13,8 @@ cd sample
 npm test
 ```
 
+La segunda muestra, [idempotencia y transacciones](idempotency/README.md), conserva el módulo de recepciones y agrega un esquema PostgreSQL ficticio con pruebas de concurrencia, conflicto y rollback. Incluye seis pruebas unitarias y cinco escenarios de integración. [Ver ejecución automática](https://github.com/Dante2617012022/camdis-erp-case-study/actions/workflows/samples.yml).
+
 ## El proyecto en dos minutos
 
 Camdis Operations es el componente de producción e inventario de mi proyecto ERP para una PyME gastronómica. Organiza movimientos de materiales, producción y correcciones para poder responder **quién actuó, qué cambió y cómo se conserva la consistencia si una operación falla o se repite**.
