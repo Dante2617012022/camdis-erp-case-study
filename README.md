@@ -1,8 +1,17 @@
 # ERP Camdis — seguridad e integridad operativa
 
-> Repositorio documental público. Presenta un caso de estudio; no contiene el código ni la configuración del sistema operativo.
+> Caso de estudio público con una muestra de código adaptada y ejecutable. El repositorio completo y la configuración del sistema operativo permanecen privados.
 
 **Proyecto principal de Dante Gabriel Balbuena Atar · Técnico Universitario en Ciberseguridad**
+
+## Código para evaluar
+
+La [muestra ejecutable](sample/README.md) incluye una política de anulación, utilidades de validación y **19 pruebas automatizadas** aprobadas en la revisión local del 21/09/2026. Se ejecuta con Node.js, sin dependencias externas. Explica su procedencia, las adaptaciones y los límites de seguridad.
+
+```sh
+cd sample
+npm test
+```
 
 ## El proyecto en dos minutos
 
@@ -14,7 +23,7 @@ Camdis Operations es el componente de producción e inventario de mi proyecto ER
 | ¿Cuál es mi aporte? | Diseño y desarrollo de flujos, controles de acceso, integridad, pruebas y documentación del proyecto propio. |
 | ¿Qué lo hace relevante para seguridad? | Los permisos, la consistencia y la trazabilidad se verifican en el servidor y la persistencia. |
 | ¿En qué estado está? | Beta interna controlada; integración de código y despliegue operativo son etapas diferentes. |
-| ¿Qué puede revisar un evaluador? | Tres controles detallados debajo, resultados acotados y un recorrido de demostración con datos ficticios. |
+| ¿Qué puede revisar un evaluador? | Una muestra ejecutable con tests, tres controles detallados y un recorrido de demostración con datos ficticios. |
 
 El alcance es producción, depósito e inventario. No se presenta como un ERP integral de contabilidad, ventas y recursos humanos. El comercio electrónico es un proyecto separado: [Camdis Commerce](https://github.com/Dante2617012022/portfolio-web/blob/main/docs/case-studies/camdis-commerce-security.md).
 
@@ -80,7 +89,7 @@ flowchart TD
 
 Las pruebas API incluyen dependencias simuladas. Los ensayos de base de datos y las validaciones con operadores tienen alcances propios y no se suman como si fueran la misma clase de evidencia.
 
-Los resultados completos y el código operativo permanecen privados. Esta página es un resumen público contrastado con evidencia interna, **no un informe independiente ni una suite reproducible desde este repositorio público**.
+Los resultados completos y el código operativo permanecen privados. Esta página resume evidencia interna; **no es un informe independiente**. La muestra pública permite reproducir sus 19 pruebas, no la suite completa del ERP.
 
 ## Recorrido para una entrevista
 
@@ -102,3 +111,4 @@ Las tecnologías y patrones se presentan como competencias. No se publican datos
 **Competencias demostradas:** autorización en servidor, mínimo privilegio, idempotencia, transacciones, concurrencia, trazabilidad, pruebas y mantenimiento seguro.
 
 [Índice de evidencias](https://github.com/Dante2617012022/portfolio-web/blob/main/docs/PORTFOLIO_EVIDENCE_INDEX.md) · [Política de divulgación](https://github.com/Dante2617012022/portfolio-web/blob/main/docs/PUBLIC_DISCLOSURE_POLICY.md) · [Contacto profesional](https://dante2617012022.github.io/portfolio-web/#cv)
+
