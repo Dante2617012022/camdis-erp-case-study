@@ -4,6 +4,15 @@
 
 **Proyecto principal de Dante Gabriel Balbuena Atar · Técnico Universitario en Ciberseguridad**
 
+## Lectura rápida y aporte
+
+Caso complementario de seguridad aplicada para mi perfil SOC junior. Mi aporte incluye requisitos, flujos operativos, pruebas, diagnóstico, documentación y validación; el desarrollo cuenta con asistencia de IA.
+
+- **Revisar primero:** [política de permisos y correcciones](sample/README.md), con 19 pruebas unitarias.
+- **Después:** [idempotencia](idempotency/README.md), con 6 pruebas unitarias y una suite separada de integración PostgreSQL.
+- **Alcance:** las pruebas de las muestras no certifican el ERP completo. La integración requiere ejecutar su entorno e inspeccionar el resultado; no se deduce de las pruebas unitarias.
+- **Estado:** beta interna controlada. Para evidencia principal de monitoreo y triage, ver [Mini-SOC](https://github.com/Dante2617012022/mini-soc-lab).
+
 ## Código para evaluar
 
 La [muestra ejecutable](sample/README.md) incluye una política de anulación, utilidades de validación y **19 pruebas automatizadas** aprobadas en la revisión local del 21/09/2026. Se ejecuta con Node.js, sin dependencias externas. Explica su procedencia, las adaptaciones y los límites de seguridad.
