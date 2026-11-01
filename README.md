@@ -6,7 +6,7 @@
 
 ## Lectura rápida y aporte
 
-Caso complementario de seguridad aplicada para mi perfil SOC junior. Mi aporte incluye requisitos, flujos operativos, pruebas, diagnóstico, documentación y validación; el desarrollo cuenta con asistencia de IA.
+Este caso documenta el ERP que desarrollo en mi trabajo actual en Camdis (junio de 2025 – Actualidad). Mi aporte incluye requisitos, flujos operativos, desarrollo, pruebas, diagnóstico, documentación y validación; la implementación cuenta con asistencia de IA. Permite evaluar desarrollo junior, automatización y prácticas de seguridad integradas al trabajo.
 
 - **Revisar primero:** [política de permisos y correcciones](sample/README.md), con 19 pruebas unitarias.
 - **Después:** [idempotencia](idempotency/README.md), con 6 pruebas unitarias y una suite separada de integración PostgreSQL.
